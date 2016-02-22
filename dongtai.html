@@ -1,0 +1,31 @@
+<html>  
+        <head>  
+        <title>js动态创建div等元素实例</title>  
+        <style type="text/css">  
+        </style>  
+        </head>  
+        <body>  
+        <script language="javascript">  
+            var Test={  
+                createDiv:function(){  
+                    var div = document.createElement('div');  
+                    div.id="createDiv";  
+                    div.style.cssText = 'border:1px solid red; width:200px; z-index:100; height:20px;';  
+                    document.body.appendChild(div);  
+                },  
+                appendDivChild:function(){  
+                    var div = document.createElement('div');  
+                    div.id="appendDivChild";  
+                    div.style.cssText = 'border:1px solid green; width:200px; z-index:100; height:100px;';  
+                    var childDiv= document.createElement('div');  
+                    childDiv.id="childDiv";  
+                    childDiv.style.cssText = 'border:2px solid gray; width:200px; z-index:100; height:50px;';  
+                    div.appendChild(childDiv);  
+                    document.body.appendChild(div);  
+                }
+            };  
+            Test.createDiv();//创建div  
+            Test.appendDivChild();//为追加子div  
+        </script>  
+        </body>  
+    </html>  
